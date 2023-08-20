@@ -10,8 +10,8 @@ uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
 
 if uploaded_file is not None:
     
-    prompt = f"Generate Java code to read the uploaded Excel file using the Apache POI library.\n"
-    prompt += f"File path: {uploaded_file.name}\n"
+    prompt = "Generate Java code to read the uploaded Excel file using the Apache POI library.\n"
+    prompt += "File path: {uploaded_file.name}\n"
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k", 
         messages=[
